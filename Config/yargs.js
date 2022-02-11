@@ -1,18 +1,23 @@
+const { describe } = require('yargs');
+
 const argv = require('yargs')
             .option('b',{
                 alias: 'base',
                 type:'number',
-                demandOption:true
+                demandOption:true,
+                describe:"Base de la tabla de multiplicar"
             })
             .option('l',{
                 alias: 'listar',
                 type:'boolean',
-                default: false
+                default: false,
+                describe:"Mostrar en consola la tabla"
             })
             .option('h',{
                 alias: 'hasta',
                 type:'number',
-                default: 10
+                default: 10,
+                describe:"Hasta que numero llega la tabla"
             })
             .check( (argv, options)=>{
 
